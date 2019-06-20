@@ -1,0 +1,11 @@
+fetch('https://jsonplaceholder.typicode.com/todos?_limit=5')
+	.then(res => res.json())
+	.then(res => console.log(res));
+
+async function go(){
+    let res = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=5')
+    let json = await res.json()
+    console.log(json)
+}
+
+go();
